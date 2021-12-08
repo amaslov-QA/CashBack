@@ -1,14 +1,14 @@
 package domain;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
-import static org.testng.Assert.*;
+import static org.junit.Assert.*;
 
 public class CashbackHackerTest {
+    CashbackHacker service = new CashbackHacker();
 
     @Test
-    void shouldCashOne() {
-        CashbackHacker service = new CashbackHacker();
+    public void shouldCashOne() {
         int amount = 1000;
 
         int actual = service.remain(amount);
@@ -16,9 +16,9 @@ public class CashbackHackerTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
-    void shouldCashTwo() {
-        CashbackHacker service = new CashbackHacker();
+   public void shouldCashTwo() {
         int amount = 900;
 
         int actual = service.remain(amount);
@@ -26,9 +26,10 @@ public class CashbackHackerTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
-    void shouldCashFree() {
-        CashbackHacker service = new CashbackHacker();
+   public void shouldCashFree() {
+
         int amount = 999;
 
         int actual = service.remain(amount);
@@ -36,8 +37,9 @@ public class CashbackHackerTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
-    void shouldCashFour() {
+    public void shouldCashFour() {
         CashbackHacker service = new CashbackHacker();
         int amount = 1001;
 
@@ -46,10 +48,11 @@ public class CashbackHackerTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
-    void shouldCasFour() {
-        CashbackHacker service = new CashbackHacker();
-        int amount = 6000;
+   public void shouldCasFour() {
+
+        int amount = 1900;
 
         int actual = service.remain(amount);
         int expected = 0;
