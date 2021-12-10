@@ -1,9 +1,9 @@
 
 on:
   push:
-    branches: [ testng ]
+    branches: [ junit4 ]
   pull_request:
-    branches: [ testng ]
+    branches: [ junit4 ]
 
 jobs:
   build:
